@@ -22,10 +22,13 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: ✅ Lint packages
+        working-directory: admin-v2
         run: yarn lint
 
       - name: 👷 Build packages
+        working-directory: admin-v2
         run: yarn build
 
       - name: 🧪 Test packages
+        working-directory: admin-v2
         run: yarn test

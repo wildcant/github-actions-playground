@@ -20,5 +20,6 @@ runs:
         cache: 'yarn'
 
     - name: 📦 Install dependencies
+      working-directory: admin-v2
       run: yarn install --frozen-lockfile
       shell: bash
