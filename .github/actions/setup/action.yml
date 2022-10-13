@@ -14,11 +14,9 @@ runs:
   using: composite
   steps:
     - name: 🏗 Setup Node
-      working-directory: admin-v2
       uses: actions/setup-node@v3
       with:
         node-version: ${{ inputs.node-version }}
-        cache: 'yarn'
 
     - name: 📦 Install dependencies
       working-directory: admin-v2
