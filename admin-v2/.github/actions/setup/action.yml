@@ -1,0 +1,24 @@
+name: Setup
+description: Prepare and install everything for the project
+
+inputs:
+  node-version:
+    description: Version of Node to use
+    default: 16.13.2
+
+  pnpm-version:
+    description: Version of yarn to use
+    default: 1.22.19
+
+runs:
+  using: composite
+  steps:
+    - name: 🏗 Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'yarn'
+
+    - name: 📦 Install dependencies
+      run: yarn install --frozen-lockfile
+      shell: bash
