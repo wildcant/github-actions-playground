@@ -17,6 +17,8 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ inputs.node-version }}
+        cache: 'yarn'
+        cache-dependency-path: admin-v2/yarn.lock
 
     - name: 📦 Install dependencies
       working-directory: admin-v2
