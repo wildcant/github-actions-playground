@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "echo Linting"
+    "lint": "echo Linting",
+    "cypress:run": "echo cypress-run"
   },
   "eslintConfig": {
     "extends": [
